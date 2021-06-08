@@ -1,0 +1,29 @@
+<div class="md-dialog-container" id="wdplayer" ng-controller="ControllerIndex" >
+  <form ng-init="loadVideo">
+    <md-dialog style="width:800px; height:350px; !important">
+      <md-toolbar class="md-table-toolbar md-default">
+          <div class="md-toolbar-tools" layout="row" flex >
+              <h1>Player Video</h1>
+              <div  layout="row" flex></div>
+
+              <div layout="row" layout-align="end start">
+                  <md-button class="md-icon-button" ng-click="hide()" style="margin-top: -10px; margin-right: -10px">
+                      <md-icon class="md-icon md-primary md-18" aria-label="Fechar" title="Fechar"  style="margin-top: -10px; margin-right: -10px">close</md-icon>
+                  </md-button>
+              </div>
+          </div>
+      </md-toolbar>
+      <md-content layout="column">
+        <div id="play"></div>
+      </md-content>
+      <!--md-dialog-actions flex layout-align="end center" layout="row">
+          <md-button class="md-primary" ng-click="cancel($event,{})">
+              Cancelar
+          </md-button>
+          <md-button type="submit" class="md-primary" >
+              Salvar
+          </md-button>
+      </md-dialog-actions-->
+    </md-dialog>
+  </form>
+</div>

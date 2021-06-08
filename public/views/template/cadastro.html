@@ -1,0 +1,44 @@
+<div class="md-dialog-container" id="wDialog" ng-controller="ControllerIndex">
+  <form ng-submit="save($event,canal)">
+    <md-dialog>
+      <md-toolbar class="md-table-toolbar md-default">
+          <div class="md-toolbar-tools" layout="row" flex >
+              <h1>Cadastrar canal</h1>
+              <div  layout="row" flex></div>
+
+              <div layout="row" layout-align="end start">
+                  <md-button class="md-icon-button" ng-click="hide()" style="margin-top: -10px; margin-right: -10px">
+                      <md-icon class="md-icon md-primary md-18" aria-label="Fechar" title="Fechar"  style="margin-top: -10px; margin-right: -10px">close</md-icon>
+                  </md-button>
+              </div>
+          </div>
+      </md-toolbar>
+      <md-content layout="column">
+        <md-input-container layout="row" >
+          <label>Nome</label>
+          <input ng-model="canal.nome" name="nome" uppercase  ng-required="true">
+        </md-input-container>
+        <md-input-container layout="row">
+          <label>URL</label>
+          <input ng-model="canal.url" name="url" ng-required="true">
+        </md-input-container>
+        <md-input-container layout="row">
+          <label>URL imagem</label>
+          <input ng-model="canal.urlimg" name="urlimg" ng-required="true">
+        </md-input-container>
+        <md-input-container layout="row">
+          <label>Descricao</label>
+          <input ng-model="canal.descricao" name="descricao" ng-required="true">
+        </md-input-container>
+      </md-content>
+      <md-dialog-actions flex layout-align="end center" layout="row">
+          <md-button class="md-primary" ng-click="cancel($event,{})">
+              Cancelar
+          </md-button>
+          <md-button type="submit" class="md-primary" >
+              Salvar
+          </md-button>
+      </md-dialog-actions>
+    </md-dialog>
+  </form>
+</div>

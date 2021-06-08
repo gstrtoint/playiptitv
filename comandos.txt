@@ -1,0 +1,136 @@
+  500  ffmpeg -v info -rtsp_transport tcp -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 
+  501  ffmpeg -v info -rtsp_transport tcp -i rtsp://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 
+  502  ffmpeg -v info -rtsp_transport tcp -i rtsp://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.m3u8
+  504  ffmpeg -v info -rtsp_transport tcp -i rtsp://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.m3u8
+  505  ffmpeg -v info -rtsp_transport tcp -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.m3u8
+  506  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.m3u8
+  507  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c copy teste.ogg
+  508  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c copy ./teste.ogg
+  509  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 8000k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  510  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 8000k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.mp4
+  511  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 8000k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.m3u8
+  512  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  513  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a libvorbis -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  514  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a libvorbis copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  515  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:a libvorbis -b 8 -c copy ./teste.ogg
+  516  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:a libvorbis -c copy ./teste.ogg
+  517  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:a libvorbis -b:a 400k -c copy ./teste.ogg
+  518  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:a libvorbis -b:a 400k -c copy ./teste.mp4
+  519  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:a libvorbis -b:a 400k -c copy ./teste.oga
+  520  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:a libvorbis -b:a 8k ./teste.ogg
+  521  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec copy -vcodec copy ./teste.mp4
+  522  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240 video.webm
+  523  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a libvorbis -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  524  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.m3u8
+  525  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.webm
+  526  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240  copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.webm
+  527  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240 -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.webm
+  528  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240 -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.webm
+  529  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.webm
+  530  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240 -c:v copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.webm
+  531  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240  -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 test.webm
+  532  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240 copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 test.webm
+  533  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b:a 128k -ar 44100 -b:v 345k -s 426x240 t.webm -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 test.webm
+  534* ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -b: -ar 44100 -b:v 345k -s 426x240 -maxrate 400k  -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 test.webm
+  535  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -ac 2 -ar 44100 -b:v 345k -s 426x240 -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 test.webm
+  536  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a libvorbis copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.webm
+  537  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.m3u8
+  538  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.m3u8
+  539  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.webm
+  540  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  541  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -vcodec libvpx-vp9 -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  542  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -vcodec libvpx-vp9 -b:v 1M -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  543  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -vcodec libvpx -b:v 1M -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  544  ffmpeg -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -vcodec libvpx -qmin 0 -qmax 50 -crf 10 -b:v 1M -acodec libvorbis output.webm
+  545  ffmpeg -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8  -vcodec libvpx-vp9 -b:v 1M -acodec libvorbis output.webm
+  546  ffmpeg -i <source> -c:v libvpx-vp9 -pass 2 -b:v 1000K -threads 1 -speed 0   -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25 \
+  547  ffmpeg -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -c:v libvpx-vp9 -pass 2 -b:v 1000K -threads 1 -speed 0   -tile-columns 0 -frame-parallel 0 -auto-alt-ref 1 -lag-in-frames 25   -g 9999 -aq-mode 0 -c:a libopus -b:a 64k -f webm out.webm
+  548  ffmpeg -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -vcodec libvpx -qmin 0 -qmax 50 -crf 10 -b:v 400K -acodec libvorbis output.webm
+  549  ffmpeg -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -vcodec libvpx -qmin 0 -qmax 50 -crf 10 -b:v 400K -acodec libvorbis -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 output.webm
+  550  ffmpeg -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -vcodec libvpx -qmin 0 -qmax 50 -crf 10 -b:v 400K -acodec libvorbis -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 output.ogg
+  551  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.m3u8
+  552  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.ogg
+  553  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 ./test.mp4
+  554  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 test.m3u8
+  555  ffmpeg -v info -i http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -acodec libvorbis -c:v copy -c:a copy -maxrate 400k -bufsize 1835k -pix_fmt yuv420p -flags -global_header -hls_time 10 -hls_list_size 6 -hls_wrap 10 -start_number 1 test.m3u8 test.mp4
+  556  history |grep ffmpeg
+  557  history |grep ffmpeg > Projetos/PlayVLC/comandos.txt 
+  362  locate libvlc.so
+  427  python wxvlc.py 
+  428  python3 wxvlc.py 
+  429  python tkvlc.py 
+  430  python qtvlc.py 
+  443  node iptv-proxy.js -c vlc-playlist.xml 
+  446  node iptv-proxy.js -c vlc-playlist.xml 
+  447  node iptv-proxy.js --config vlc-playlist.xml 
+  455  node --inspect-brk=5858 iptv-proxy.js -c vlc-playlist.xml 
+  456  node --inspect-brk=5858 iptv-proxy.js -c vlc-playlist.xml 
+  457  node -c ./vlc-playlist.xml --inspect-brk=5858 iptv-proxy.js
+  558  history |grep vlc >> Projetos/PlayVLC/comandos.txt 
+  379  locate libvlc.so
+  444  python wxvlc.py 
+  445  python3 wxvlc.py 
+  446  python tkvlc.py 
+  447  python qtvlc.py 
+  460  node iptv-proxy.js -c vlc-playlist.xml 
+  463  node iptv-proxy.js -c vlc-playlist.xml 
+  464  node iptv-proxy.js --config vlc-playlist.xml 
+  472  node --inspect-brk=5858 iptv-proxy.js -c vlc-playlist.xml 
+  473  node --inspect-brk=5858 iptv-proxy.js -c vlc-playlist.xml 
+  474  node -c ./vlc-playlist.xml --inspect-brk=5858 iptv-proxy.js
+  502  vlc -I dummy screen:// :screen-fps=16.000000 :screen-caching=100 :sout=#transcode{vcodec=theo,vb=800,scale=1,width=600,height=480,acodec=mp3}:http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg} :no-sout-rtp-sap :no-sout-standard-sap :ttl=1 :sout-keep
+  503  vlc -I dummy schttp://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :sout=#transcode{vcodec=theo,vb=800,scale=1,width=600,height=480,acodec=mp3}:http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg} :no-sout-rtp-sap :no-sout-standard-sap :ttl=1 :sout-keep
+  504  vlc -I dummy sctp://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :sout=#transcode{vcodec=theo,vb=800,scale=1,width=600,height=480,acodec=mp3}:http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg} :no-sout-rtp-sap :no-sout-standard-sap :ttl=1 :sout-keep
+  505  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :sout=#transcode{vcodec=theo,vb=800,scale=1,width=600,height=480,acodec=mp3}:http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg} :no-sout-rtp-sap :no-sout-standard-sap :ttl=1 :sout-keep
+  506  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg}
+  507  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 -sout
+  508  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 --sout "#transcode{vcodec=none,acodec=vorb,ab=128,channels=2,samplerate=44100}:file{dst=foobar.ogg}"
+  509  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg}
+  510  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :file{mux=ogg,dst=desktop.ogg}
+  511  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 sc:http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg}
+  512  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg}
+  513  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8  --sout "#transcode{vcodec=none,acodec=vorb,ab=128,channels=2,samplerate=44100}:file{dst=foobar.ogg}"
+  514  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8  --sout "#transcode{vcodec=none,acodec=vorb,ab=128,channels=2,samplerate=44100}:file{dst=foobar.ogg}"
+  515  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg}
+  516  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :http{mux=ogg,dst=./desktop.ogg}
+  517  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :file{mux=ogg,dst=./desktop.ogg}
+  518  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout '#standard{access=http,mux=ogg,dst=server.example.org:8080}'
+  519  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout '#standard{access=http,mux=ogg,dst=localhost:8080}'
+  520  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout '#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:#standard{access=http,mux=ogg,dst=localhost:8080}'
+  521  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout '#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:standard{access=http,mux=ogg,dst=localhost:8080}'
+  522  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout '#standard{access=http,mux=ogg,dst=localhost:8080}'
+  523  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg}
+  524  vlc -I dummy y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 http{mux=ogg,dst=127.0.0.1:8080/desktop.ogg}
+  525  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout '#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:standard{access=http,mux=ogg,dst=localhost:8080}'
+  526  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout --sout="#duplicate{dst=std{access=file,mux=asf,
+  527  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout --sout="#duplicate{dst=std{access=file,mux=asf,dst='test.asf'},dst=nodisplay}"
+  528  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#duplicate{dst=std{access=file,mux=asf,dst='test.asf'},dst=nodisplay}"
+  529  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis}:duplicate{dst=std{access=file,mux=asf,dst='test.asf'},dst=nodisplay}"
+  530  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis, dst=std{access=file,mux=asf,dst='test.asf'},dst=nodisplay}"
+  531  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis, :dst=std{access=file,mux=asf,dst='test.asf'},dst=nodisplay}"
+  532  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis, :dst=std{access=file,mux=asf,dst='teste.webm'},dst=nodisplay}"
+  533  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#duplicate{dst=std{access=file,mux='ffmpeg{mux=webm}',dst='test.webm'},dst=nodisplay}"
+  534  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#duplicate{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis,dst=std{access=file,mux='ffmpeg{mux=webm}',dst='test.webm'},dst=nodisplay}"
+  535  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis,dst=std{access=file,mux='ffmpeg{mux=webm}',dst='test.webm'},dst=nodisplay}"
+  536  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis},duplicate{dst=std{access=file,mux='ffmpeg{mux=webm}',dst='test.webm'},dst=nodisplay}"
+  537  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{dst=std{access=file,mux='ffmpeg{mux=webm}',dst='test.webm'},dst=nodisplay}"
+  538  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#duplicate{dst=std{access=file,mux='ffmpeg{mux=webm}',dst='test.webm'},dst=nodisplay}"
+  539  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis, :dst=std{access=file,mux=asf,dst='teste.webm'},dst=nodisplay}"
+  540  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis, dst=std{access=file,mux=asf,dst='teste.webm'},dst=nodisplay}"
+  541  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#duplicate{dst=std{access=file,mux='ffmpeg{mux=webm}',dst='test.webm'},dst=nodisplay}"
+  542  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :sout="#duplicate{dst=std{access=file,mux='ffmpeg{mux=webm}',dst='test.webm'},dst=nodisplay}"
+  543  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout '#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:standard{access=http,mux='ffmpeg{mux=webm}',dst=teste.webm}'
+  544  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout '#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:standard{access=file,mux='ffmpeg{mux=webm}',dst=teste.webm}'
+  545  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout "#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:standard{access=file,mux='ffmpeg{mux=webm}',dst=teste.webm}"
+  546  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :sout=#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:standard{access=file,mux='ffmpeg{mux=webm}',dst=teste.webm}
+  547  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 :sout=#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:standard={access=file,mux='ffmpeg{mux=webm}',dst=teste.webm}
+  548  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout"#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:standard={access=file,mux='ffmpeg{mux=webm}',dst=teste.webm}"
+  549  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout "#transcode{vcodec=mp4v,acodec=mpga,vb=800,ab=128}:standard={access=file,mux='ffmpeg{mux=webm}',dst=teste.webm}"
+  550  cvlc --help
+  551  cvlc -H
+  552  vlc -H
+  553  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout "#duplicate{dst=std{access=file,mux='ffmpeg{mux=webm}',dst='test.webm'},dst=nodisplay}"
+  554  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis, :dst=std{access=file,mux=asf,dst='teste.webm'},dst=nodisplay}"
+  555  vlc -I dummy -vvv y http://evpp.mm.uol.com.br/redetv2/redetv2/chunklist_w1379590905.m3u8 screen-fps=16.000000 :screen-caching=100 --sout="#transcode{vcodec=VP80,vb=800,scale=0.5,vfilter=transform,aenc=vorbis, :dst=std{access=file,mux=asf,dst='./teste.webm'},dst=nodisplay}"
+  556  history |grep vlc
+  557  history |grep vlc >> Projetos/PlayVLC/comandos.txt 

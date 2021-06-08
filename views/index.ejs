@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel="stylesheet" href="node_modules/angular-material/angular-material.css">
+    <link rel="stylesheet" type="text/css" href="node_modules/material-design-icons/iconfont/material-icons.css">
+    <link rel="stylesheet" href="node_modules/video.js/dist/video-js.min.css">
+    <link rel="stylesheet" href="node_modules/angular-material-data-table/dist/md-data-table.min.css">
+  </head>
+  <body ng-app="appplay">
+
+
+    <script type="text/javascript" src="node_modules/angular/angular.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-animate/angular-animate.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-aria/angular-aria.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-messages/angular-messages.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-material/angular-material.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-material-data-table/dist/md-data-table.min.js"></script>
+
+    <script type="text/javascript" src="javascripts/app/app.js"></script>
+    <script type="text/javascript" src="javascripts/app/constants.js"></script>
+    <script type="text/javascript" src="javascripts/app/service/permissao.js"></script>
+    <script type="text/javascript" src="javascripts/app/service/imageService.js"></script>
+    <script type="text/javascript" src="javascripts/app/factory/servicesComuns.js"></script>
+
+    <script type="text/javascript" src="javascripts/app/controllers/index.js"></script>
+
+    <!--script type="text/javascript" src="javascripts/app/route.js"></script-->
+    <script type="text/javascript" src="javascripts/app/directive/directive.js"></script>
+
+    <script type="text/javascript" src="node_modules/video.js/dist/video.min.js"></script>
+    <script type="text/javascript" src="node_modules/videojs-contrib-hls/dist/videojs-contrib-hls.min.js"></script>
+
+    <div ng-controller="ControllerIndex as ctrl" ng-cloak>
+
+      <md-toolbar class="md-hue-1">
+        <div class="md-toolbar-tools">
+          <md-button class="md-icon-button" ng-disabled="false">
+            <md-icon id="filler-icon" class="md-icon md-48">tv</md-icon>
+          </md-button>
+          <h2 flex md-truncate>
+            TV on-line
+          </h2>
+          <md-button class="md-icon-button" aria-label="gravados" ng-click="listrec()">
+            <md-icon id="filler-icon" class="md-icon md-48">playlist_play</md-icon>
+          </md-button>
+        </div>
+      </md-toolbar>
+      <md-content layout='row'>
+        <p style="padding:10px">Bem vindo ao <%= title %></p>
+      </md-content>
+      <md-content layout='row' layout-align="center center" ng-show="!gravados">
+        <div layout='column' flex="90" flex-xs="95" >
+          <div layout="row">
+            <div>
+              <label> LISTA DE CANAIS </label>
+            </div>
+            <div flex></div>
+            <div>
+              <md-button aria-label="menu" class="md-fab md-mini" ng-click="control=!control">
+                <md-icon class="md-icon md-48">{{control?'expand_less':'expand_more'}}</md-icon>
+              </md-button>
+            </div>
+          </div>
+          <md-divider></md-divider>
+          <div layout="row" style="zoom: 90%!important" layout-aling="center center" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak ng-show="control">
+            <span ng-repeat="c in canais">
+              <!--md-whiteframe class="md-whiteframe" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center"-->
+              <md-whiteframe class="md-whiteframe" layout layout-align="center center">
+                <md-card  md-theme-watch flex>
+                  <md-button class="md-icon-button md-primary" aria-label="Excluir" title="Remover canal definitivamente!" ng-click="removeCanal($event,c.url)">
+                    <md-icon class="md-icon">delete_forever</md-icon>
+                  </md-button>
+                  <md-card-title>
+                      <md-card-title-text>
+                          <span class="md-headline">{{c.nome}}</span>
+                          <span class="md-subhead">{{c.descricao}}</span>
+                      </md-card-title-text>
+                      <md-card-title-media>
+                          <!--div class="md-media-sm card-media" layout-align="end center"><md-icon class="md-icon md-64" >more_vert</md-icon></div-->
+                          <div class="md-media-sm card-media" layout-align="end center"><img ng-src="{{c.urlimage}}" class="md-card-image" alt="Washed Out"></div>
+                      </md-card-title-media>
+                  </md-card-title>
+                  <md-card-actions layout="row" layout-align="end center">
+                      <div>{{$index.toString().length==1?'0'+$index:$index}}</div>
+                      <div flex></div>
+                      <div>
+                        <md-button class="md-icon-button" id="btng{{$index}}" aria-label="Gravar" title='Gravar' ng-click="gravar($event,c,$index);c.btng=!c.btng">
+                          <span ng-show='!c.btng'>
+                            <md-icon md-colors="{color: 'red'}" md-svg-src="images/icons/ic_fiber_manual_record_48px.svg"></md-icon>
+                          </span>
+                          <span ng-show='c.btng'>
+                            <md-icon class="material-icons" md-colors="{color: 'red'}" >stop</md-icon>
+                          </span>
+                        </md-button>
+                        <md-button class="md-icon-button" id="btna{{$index}}" aria-label="Assistir" title="Assistir" ng-click="assitir($event,c,$index)">
+                          <span ng-show='!btna{{$index}}'>
+                            <md-icon class="material-icons" md-colors="{color: 'green'}" >play_arrow</md-icon>
+                          </span>
+                          <span ng-show='btna{{$index}}'>
+                            <md-icon class="material-icons" md-colors="{color: 'green'}" >play_circle_outline</md-icon>
+                          </span>
+                        </md-button>
+                      </div>
+                  </md-card-actions>
+                </md-card>
+              </md-whiteframe>
+            </span>
+          </div>
+          <div id="container" layout="row" layout-aling="center center" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>
+
+            <span ng-repeat="v in videos">
+              <!--md-whiteframe class="md-whiteframe" flex-sm="45" flex-gt-sm="35" flex-gt-md="25" layout layout-align="center center"-->
+              <md-whiteframe class="md-whiteframe" layout="column" layout-align="center center">
+                <div layout="row" layout-align='end center'>
+                  <div >{{v.index.toString().length==1?'0'+v.index:v.index}} {{v.nome}}</div>
+                  <div flex></div>
+                  <div layout>
+                    <md-button class="md-icon-button" aria-label="More" ng-click="remove(v)">
+                      <md-icon class="md-icon">clear</md-icon>
+                    </md-button>
+                  </div>
+                </div>
+                <div layout="row">
+                  <video id="play{{v.index}}" width=500 height=250 class="video-js vjs-default-skin" controls preload="auto" width="640" height="268" data-setup="{}">
+                    <source src="{{v.url}}" type="application/x-mpegURL">
+                  </video>
+                </div>
+              </md-whiteframe>
+            </span>
+          </div>
+          <div class="lock-size" layout="row" layout-align="end center">
+            <md-fab-speed-dial >
+              <md-fab-trigger>
+                <md-button aria-label="menu" class="md-fab" ng-click="pesqHidden($event)">
+                  <md-icon class="md-icon md-48">add</md-icon>
+                </md-button>
+              </md-fab-trigger>
+            </md-fab-speed-dial>
+          </div>
+        </div>
+      </md-content>
+      <!-- Inicio - Lista videos gravados -->
+      <md-content layout='column' layout-align="center center" ng-show="gravados">
+        <md-toolbar class="md-table-toolbar md-default" ng-hide="options.rowSelection && selected.length">
+            <div class="md-toolbar-tools">
+                <span>Videos gravados</span>
+                <div flex></div>
+            </div>
+        </md-toolbar>
+        <!--md-toolbar class="md-table-toolbar alternate" ng-show="options.rowSelection && selected.length">
+            <div class="md-toolbar-tools">
+                <span>{{selected.length}} {{selected.length > 1 ? 'itens selecionados' : 'item selecionado'}}</span>
+                <div flex></div>
+                <md-button class="md-icon-button md-primary" ng-click="" >
+                    <md-tooltip md-direction="top">Excluir exame selecionado(s) para sempre</md-tooltip>
+                    <md-icon class="md-icon">delete_forever</md-icon></md-button>
+            </div>
+        </md-toolbar-->
+        <md-table-container>
+          <table md-table md-row-select="options.rowSelection" multiple="{{options.multiSelect}}"
+                   ng-model="selected" md-progress="promise">
+            <thead ng-if="!options.decapitate" md-head md-order="query.order" >
+            <tr class="md-table-toolbar alternate">
+              <td>
+                <md-button class="md-icon-button" style="margin-top: -30px">
+                  <md-icon class="md-icon md-36 md-primary">filter_list</md-icon>
+                </md-button>
+              </td>
+              <td>
+                <md-input-container>
+                  <label>Video</label>
+                  <input ng-model="ctrl.search" type="text">
+                </md-input-container>
+              </td>
+            </tr>
+            <tr md-row>
+              <th md-column></th>
+              <th md-column md-order-by="name"><span>Video</span></th>
+            </tr>
+            </thead>
+            <tbody md-body>
+            <tr md-row md-select="arqexa" md-on-select="logItem" md-auto-select="options.autoSelect"
+                ng-repeat="l in listgrav| filter: ctrl.search | orderBy: query.order | limitTo: query.limit : (query.page -1) * query.limit">
+              <td md-cell>
+                <md-button class="md-icon-button" ng-click="wdplay($event,l.url)">
+                  <md-tooltip md-direction="top">Player o video!</md-tooltip>
+                  <md-icon class="md-icon md-primary">movie</md-icon></md-button>
+              </td>
+              <td md-cell ng-click="teste()">{{l.url}}</td>
+            </tr>
+            </tbody>
+          </table>
+        </md-table-container>
+
+        <md-table-pagination md-limit="query.limit" md-limit-options="limitOptions" md-page="query.page"
+          md-total="{{listgrav.length}}" md-page-select="options.pageSelect"
+          md-boundary-links="options.boundaryLinks" md-on-paginate="logPagination">
+        </md-table-pagination>
+      </md-content>
+      <!-- Fim - Lista videos gravados -->
+    </div>
+    <div style="visibility: hidden" ng-include="'views/template/cadastro.html'"></div>
+    <div style="visibility: hidden" ng-include="'views/template/player.html'"></div>
+  </body>
+</html>
