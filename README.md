@@ -13,7 +13,7 @@ sudo apt-get install ffmpeg
 
 Após baixar o sistema entre na pasta rais execute npm install para instalar as dependências. Dentro da pasta public execute ln -s ../node_modules/ node_modules.
 
-Alguns screeshot
+Alguns screenshot:
 
 ![canais](https://user-images.githubusercontent.com/7433110/121065498-35b95d00-c79f-11eb-9a53-982031d4501c.png)
 
